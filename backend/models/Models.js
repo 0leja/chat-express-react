@@ -3,11 +3,8 @@ const { UserChat } = require("./UserChat");
 const { User } = require("./User");
 
 
-User.hasMany(UserChat)
-UserChat.belongsTo(User)
 
-
-UserChat.hasMany(ChatMessage)
+UserChat.hasMany(ChatMessage, { as: 'messages' })
 ChatMessage.belongsTo(UserChat)
 
 

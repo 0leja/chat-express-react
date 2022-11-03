@@ -5,13 +5,8 @@ const { ChatController } = require('../controllers/ChatController')
 
 const ChatRouter = new Router
 
-// const WSServer = require('express-ws')(ChatRouter)
-
-
-
-// ChatRouter.ws('/', ChatController.sendMessage)
-
-
+ChatRouter.get('/', ChatController.getChat)
+ChatRouter.post('/new', ChatController.cerateOne)
 
 
 module.exports = {ChatRouter}
